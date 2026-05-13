@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Bellot — Lead Developer</title>
+  <meta name="description" content="CV de Martin Bellot — Lead Developer | Expert Fullstack & Systèmes Embarqués" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="bg-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Floating action toolbar -->
+  <div class="toolbar no-print" role="toolbar" aria-label="Actions">
+    <button id="themeToggle" class="tb-btn" title="Changer de thème" aria-label="Changer de thème">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+    <button id="downloadPdf" class="tb-btn primary" title="Télécharger en PDF" aria-label="Télécharger en PDF">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span>PDF</span>
+    </button>
+  </div>
+
+  <main class="cv" id="cv">
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="hero-left">
+        <div class="avatar" aria-hidden="true">
+          <span>MB</span>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="hero-text">
+          <div class="status">
+            <span class="status-dot"></span>
+            <span>Disponible pour des projets ambitieux</span>
+          </div>
+          <h1>Martin <span class="gradient-text">Bellot</span></h1>
+          <p class="role">Lead Developer · Expert Fullstack &amp; Systèmes Embarqués</p>
+          <ul class="contacts">
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Rennes, France
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:martin@intuition-rt.com">martin@intuition-rt.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+33781771236">07 81 77 12 36</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <a href="https://ondes.pro" target="_blank" rel="noopener">ondes.pro</a>
+            </li>
+          </ul>
+          <div class="links">
+            <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+            <a class="chip" href="https://github.com/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.63 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.04 11.04 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.67.8.55A11.5 11.5 0 0 0 12 .5z"/></svg>
+              GitHub
+            </a>
+            <a class="chip" href="https://ondes.pro" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg>
+              Ondes.pro
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROFIL -->
+    <section class="section profile-section">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>Profil</h2>
+        <span class="section-line"></span>
+      </div>
+      <p class="profile-text">
+        Expert en architecture logicielle avec une <strong>double compétence rare</strong> : développement de plateformes
+        SaaS haut niveau (<em>Next.js / Django</em>) et systèmes embarqués bas niveau (<em>C++ / Firmware</em>).
+        Promu <strong>Lead Developer</strong> dès la fin de mon Master, je pilote l'écosystème technique d'Intuitions Robotics.
+        Créateur de la solution e-commerce <strong>Ondes.pro</strong>, gérant actuellement l'intégralité du back-office de la marque
+        <strong>Ilo Robot</strong>.
+      </p>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section class="section">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Compétences techniques</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Web &amp; Mobile</h3>
+          <div class="tags">
+            <span>Next.js</span><span>React</span><span>Flutter</span><span>Django</span><span>WebSockets</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>Embarqué</h3>
+          <div class="tags">
+            <span>C++ Firmware</span><span>BLE</span><span>OTA</span><span>Robotique</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3>SaaS &amp; Cloud</h3>
+          <div class="tags">
+            <span>Microservices</span><span>API REST</span><span>CI/CD</span><span>Gestion stocks</span><span>Newsletters</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Méthodologie</h3>
+          <div class="tags">
+            <span>Leadership</span><span>Agile</span><span>Clean Code</span><span>Architecture</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section class="section">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Expériences professionnelles</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="timeline">
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>Lead Developer</h3>
+              <span class="exp-date">Sept. 2025 — Présent</span>
+            </div>
+            <p class="exp-company">Intuitions Robotics &amp; Technologies</p>
+            <ul>
+              <li><strong>Direction technique</strong> — Pilotage de la roadmap logicielle et coordination des développements.</li>
+              <li><strong>Architecture firmware</strong> — Conception de firmwares robustes en C++ pour robots connectés.</li>
+              <li><strong>Innovation</strong> — Optimisation des protocoles BLE et sécurisation des mises à jour OTA.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>Développeur Fullstack <span class="exp-tag">Alternance</span></h3>
+              <span class="exp-date">2022 — 2025</span>
+            </div>
+            <p class="exp-company">Intuitions Robotics &amp; Technologies</p>
+            <ul>
+              <li><strong>Écosystème Ilo Robot</strong> — Développement de l'application mobile (Flutter) et web pour le pilotage et la configuration des robots.</li>
+              <li><strong>Industrialisation</strong> — Création d'outils de "flashing" de robots pour la production en série.</li>
+              <li><strong>Résultat</strong> — Mise en place d'une UI intuitive ayant simplifié l'adoption du robot par les clients finaux.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>Fondateur &amp; CTO</h3>
+              <span class="exp-date">2024 — Présent</span>
+            </div>
+            <p class="exp-company">Ondes.pro</p>
+            <ul>
+              <li><strong>Solution SaaS</strong> — Développement d'un "Shopify-like" customisé gérant le back-office complet d'Ilo Robot.</li>
+              <li><strong>Fonctionnalités clés</strong> — Boutique en ligne, gestion complexe des stocks, automatisation de newsletters, outils industriels (flasher de robots).</li>
+              <li><strong>Stack</strong> — Next.js, Django, API REST.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FORMATION + LANGUES -->
+    <div class="grid-2">
+      <section class="section">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Formation</h2>
+          <span class="section-line"></span>
+        </div>
+        <article class="edu">
+          <h3>Mastère Développeur &amp; Chefferie de Projet</h3>
+          <p class="edu-meta">Sup de Vinci · 2022 — 2025</p>
+          <p>Diplôme obtenu en 2025. Spécialisation en gestion de projets techniques et architecture logicielle.</p>
+        </article>
+        <article class="edu">
+          <h3>Cursus Informatique (Bachelor)</h3>
+          <p class="edu-meta">Epitech · 2020 — 2022</p>
+          <p>Validation des années 1 et 2. Réussite des "Piscines" C et C++. Bases algorithmiques solides et forte culture d'autodidactie.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <h2>Langues &amp; Intérêts</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="lang">
+          <div class="lang-head">
+            <span>Anglais</span>
+            <span class="lang-level">C1 · Courant</span>
+          </div>
+          <div class="lang-bar"><div style="width:88%"></div></div>
+          <p class="lang-desc">Capacité à diriger des réunions techniques et rédiger de la documentation complexe.</p>
+        </div>
+        <div class="lang">
+          <div class="lang-head">
+            <span>Français</span>
+            <span class="lang-level">Natif</span>
+          </div>
+          <div class="lang-bar"><div style="width:100%"></div></div>
+        </div>
+        <div class="interests">
+          <h4>Centres d'intérêt</h4>
+          <ul>
+            <li><strong>Musique</strong> — Créateur et performeur de musique électronique en live (hardware &amp; logiciels spécialisés).</li>
+            <li><strong>Veille tech</strong> — SaaS et automatisation industrielle.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <footer class="cv-footer">
+      <span>© 2026 Martin Bellot</span>
+      <span class="dot">·</span>
+      <span>Conçu &amp; développé avec passion</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
