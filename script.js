@@ -1,14 +1,14 @@
-// Theme toggle
+// Theme toggle (default = light; dark via [data-theme="dark"])
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('cv-theme');
-if (savedTheme) root.setAttribute('data-theme', savedTheme);
+if (savedTheme === 'dark') root.setAttribute('data-theme', 'dark');
 
 themeToggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-  const next = current === 'light' ? 'dark' : 'light';
-  if (next === 'light') {
-    root.setAttribute('data-theme', 'light');
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  if (next === 'dark') {
+    root.setAttribute('data-theme', 'dark');
   } else {
     root.removeAttribute('data-theme');
   }
