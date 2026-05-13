@@ -403,19 +403,7 @@ h1 {
     color-adjust: exact !important;
   }
 
-  /* Always export in light theme (canonical) */
-  :root, [data-theme="dark"] {
-    --bg: #fafaf9;
-    --surface: #ffffff;
-    --border: #e4e4e7;
-    --border-strong: #c8c8ce;
-    --text: #0a0a0c;
-    --text-dim: #2e2e35;
-    --text-soft: #4a4a55;
-    --text-muted: #6b6b78;
-    --accent: #18181b;
-    --accent-soft: #f1f1f3;
-  }
+  /* Use whatever theme the user is currently viewing (light or dark) */
 
   html, body {
     background: var(--bg) !important;
@@ -429,7 +417,7 @@ h1 {
   .cv {
     max-width: 100%;
     margin: 0;
-    padding: 8mm 10mm 6mm;
+    padding: 7mm 10mm 5mm;
   }
 
   /* Disable JS-driven reveal in case print fires before observer */
