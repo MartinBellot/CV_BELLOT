@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simon LE BERRE — CEO Intuition Robotique &amp; Technologies</title>
+  <meta name="description" content="CV de Simon LE BERRE — CEO Intuition Robotique &amp; Technologies · Co-Fondateur ilo robot" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+  <style>
+    /* Initials avatar (no photo available) */
+    .avatar.initials {
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 42px;
+      color: var(--text);
+      letter-spacing: -1px;
+      background: var(--accent-soft);
+    }
+    @media print {
+      .avatar.initials { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating action toolbar -->
+  <div class="toolbar no-print" role="toolbar" aria-label="Actions">
+    <button id="themeToggle" class="tb-btn" title="Changer de thème" aria-label="Changer de thème">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+    <button id="downloadPdf" class="tb-btn primary" title="Télécharger en PDF" aria-label="Télécharger en PDF">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span>PDF</span>
+    </button>
+  </div>
+
+  <main class="cv" id="cv">
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="avatar">
+        <img src="/assets/photo_simon.png" alt="Photo de Simon LE BERRE" />
+      </div>
+      <div class="hero-text">
+        <div class="status">
+          <span class="status-dot"></span>
+          <span>Co-Fondateur · Entrepreneur robotique</span>
+        </div>
+        <h1>Simon LE BERRE</h1>
+        <p class="role">CEO Intuition Robotique &amp; Technologies · Co-Fondateur ilo robot</p>
+        <ul class="contacts">
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bretagne, France
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:simon@ilorobot.com">simon@ilorobot.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+33667736947">06 67 73 69 47</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="https://ilorobot.com" target="_blank" rel="noopener">ilorobot.com</a>
+          </li>
+        </ul>
+        <div class="links">
+          <a class="chip" href="https://www.linkedin.com/in/simon-le-berre" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            LinkedIn
+          </a>
+          <a class="chip" href="https://ilorobot.com" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            ilo robot
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROFIL -->
+    <section class="section profile-section">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>Profil</h2>
+        <span class="section-line"></span>
+      </div>
+      <p class="profile-text">
+        Ingénieur double diplômé (<em>INSA CVL</em> &amp; <em>NWPU</em>) spécialisé en aérospatial,
+        <strong>entrepreneur passionné de robotique éducative</strong>. CEO et co-fondateur d'<strong>Intuitions Robotics &amp; Technologies</strong>,
+        à l'origine du robot éducatif <strong>ilo</strong>. Également <strong>actionnaire et responsable
+        de l'usine Enerflux</strong> à Blois, alliant vision produit, gestion industrielle et leadership technique.
+      </p>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section class="section">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Compétences clés</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+          </div>
+          <h3>Robotique</h3>
+          <div class="tags">
+            <span>Robots éducatifs</span><span>Conception</span><span>IA appliquée</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
+          <h3>Industrie</h3>
+          <div class="tags">
+            <span>Gestion d'usine</span><span>Production</span><span>Supply chain</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Entrepreneuriat</h3>
+          <div class="tags">
+            <span>Levée de fonds</span><span>Vision produit</span><span>Stratégie</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22l2-2 8-8 8 8 2 2"/><path d="M14 4l6 6"/><circle cx="17" cy="7" r="3"/></svg>
+          </div>
+          <h3>Aérospatial</h3>
+          <div class="tags">
+            <span>Navigation</span><span>Guidance &amp; Control</span><span>Recherche</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section class="section">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Expériences professionnelles</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="timeline">
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>CEO &amp; Co-Fondateur</h3>
+              <span class="exp-date">2022 — Présent</span>
+            </div>
+            <p class="exp-company">Intuitions Robotics &amp; Technologies · Bretagne, France</p>
+            <ul>
+              <li><strong>Création d'un projet innovant</strong> — Robot éducatif <em>« ilo »</em> apportant un support de programmation à tous les niveaux, du débutant à l'IA.</li>
+              <li><strong>Direction</strong> — Pilotage de la stratégie produit, des partenariats et du développement commercial.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>Actionnaire &amp; Responsable Usine</h3>
+              <span class="exp-date">En parallèle</span>
+            </div>
+            <p class="exp-company">Enerflux · Blois, France</p>
+            <ul>
+              <li><strong>Gestion industrielle</strong> — Responsable de l'usine Enerflux à Blois, supervision de la production et des opérations.</li>
+              <li><strong>Actionnariat</strong> — Engagement capitalistique au service du développement de l'entreprise.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>Research Engineer</h3>
+              <span class="exp-date">Avr. — Mai 2022</span>
+            </div>
+            <p class="exp-company">Istituto Italiano di Tecnologia (IIT) · Gênes, Italie</p>
+            <ul>
+              <li><strong>Eye tracking &amp; reconnaissance d'objets</strong> — Développement d'une application combinant suivi du regard et reconnaissance visuelle.</li>
+              <li><strong>Recherche</strong> — Au sein d'un institut italien spécialisé dans l'interaction sociale des robots.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-marker"></div>
+          <div class="exp-body">
+            <div class="exp-head">
+              <h3>Engineer Internship</h3>
+              <span class="exp-date">Printemps 2018</span>
+            </div>
+            <p class="exp-company">Cladding System · Auckland, Nouvelle-Zélande</p>
+            <ul>
+              <li><strong>Outil métier</strong> — Création d'un programme et d'une interface pour calculer les dimensions de découpe des panneaux de bardage.</li>
+              <li><strong>Stack</strong> — VBA + intégration SolidWorks pour interagir avec les dimensions des pièces.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FORMATION + LANGUES -->
+    <div class="grid-2">
+      <section class="section">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Formation</h2>
+          <span class="section-line"></span>
+        </div>
+        <article class="edu">
+          <h3>MSc Aerospace Engineering</h3>
+          <p class="edu-meta">NWPU · Xi'an, Chine · 2018 — 2020</p>
+          <p>Navigation, Guidance and Control of LV. Mémoire : <em>« Design and Control for Reusable Booster of Launch Vehicle »</em>.</p>
+        </article>
+        <article class="edu">
+          <h3>Diplôme d'Ingénieur</h3>
+          <p class="edu-meta">INSA CVL · Blois, France · 2016 — 2020</p>
+          <p>École du réseau INSA, spécialisation en ingénierie système, mathématiques appliquées et informatique.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <h2>Langues &amp; Intérêts</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="lang">
+          <div class="lang-head">
+            <span>Anglais</span>
+            <span class="lang-level">C1 · Courant</span>
+          </div>
+          <div class="lang-bar"><div style="width:90%"></div></div>
+          <p class="lang-desc">Études en Chine et stage en Nouvelle-Zélande, échanges internationaux quotidiens.</p>
+        </div>
+        <div class="lang">
+          <div class="lang-head">
+            <span>Français</span>
+            <span class="lang-level">Natif</span>
+          </div>
+          <div class="lang-bar"><div style="width:100%"></div></div>
+        </div>
+        <div class="interests">
+          <h4>Centres d'intérêt &amp; sports</h4>
+          <ul>
+            <li><strong>Robotique &amp; éducation</strong> — Entrepreneuriat, DIY, impression 3D, drones.</li>
+            <li><strong>Sports</strong> — Voile, chasse sous-marine, boxe.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <footer class="cv-footer">
+      <span>© 2026 Simon LE BERRE</span>
+      <span class="dot">·</span>
+      <span>Intuition Robotique &amp; Technologies</span>
+    </footer>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
