@@ -391,105 +391,116 @@ h1 {
   h1 { font-size: 28px; }
 }
 
-/* ===== PRINT (PDF) ===== */
+/* ===== PRINT (PDF) — same look, single A4 page ===== */
 @media print {
-  @page { size: A4; margin: 14mm 12mm; }
+  /* margin:0 removes Chrome's auto-injected URL/date/page-number headers */
+  @page { size: A4; margin: 0; }
+
+  /* Force browsers to print backgrounds/colors exactly as on screen */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Always export in light theme (canonical) */
+  :root, [data-theme="dark"] {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --border: #e4e4e7;
+    --border-strong: #c8c8ce;
+    --text: #0a0a0c;
+    --text-dim: #2e2e35;
+    --text-soft: #4a4a55;
+    --text-muted: #6b6b78;
+    --accent: #18181b;
+    --accent-soft: #f1f1f3;
+  }
 
   html, body {
-    background: white !important;
-    color: #18181b !important;
-    font-size: 9.5pt;
+    background: var(--bg) !important;
+    font-size: 10.5px !important;
+    line-height: 1.45 !important;
   }
+
   .no-print { display: none !important; }
 
+  /* Compact, full-bleed layout that fits a single A4 */
   .cv {
     max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 8mm 10mm 6mm;
   }
 
+  /* Disable JS-driven reveal in case print fires before observer */
+  .hero, .section { opacity: 1 !important; transform: none !important; }
+  .hero, .section, .skill-card, .exp, .edu, .lang { page-break-inside: avoid; }
+
+  /* ----- Hero ----- */
   .hero {
-    padding-bottom: 18px;
-    margin-bottom: 22px;
-    page-break-inside: avoid;
-    border-color: #e5e5e5 !important;
+    gap: 22px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
-  .avatar { width: 78px; height: 78px; }
-  h1 { font-size: 22pt !important; color: #18181b !important; }
-  .role { font-size: 10.5pt; color: #52525b !important; margin-bottom: 12px; }
-  .status {
-    background: #f4f4f5 !important;
-    border-color: #e5e5e5 !important;
-    color: #52525b !important;
-  }
-  .contacts li, .contacts a { color: #52525b !important; font-size: 8.5pt; }
-  .contacts li svg { color: #8a8a93 !important; }
-  .chip {
-    background: white !important;
-    border-color: #e5e5e5 !important;
-    color: #52525b !important;
-    font-size: 8.5pt;
-  }
+  .avatar { width: 84px; height: 84px; }
+  h1 { font-size: 26px !important; margin-bottom: 4px; letter-spacing: -0.8px; }
+  .role { font-size: 12.5px !important; margin-bottom: 10px; }
+  .status { padding: 3px 9px; font-size: 10px; margin-bottom: 8px; }
+  .status-dot { width: 5px; height: 5px; }
+  .contacts { gap: 4px 14px; margin-bottom: 8px; }
+  .contacts li { font-size: 10.5px; }
+  .contacts li svg { width: 11px; height: 11px; }
+  .links { gap: 5px; }
+  .chip { padding: 3px 9px; font-size: 10px; }
+  .chip svg { width: 11px; height: 11px; }
 
-  .section { margin-bottom: 18px; page-break-inside: avoid; }
-  .section-head { margin-bottom: 12px; }
-  .section-head h2 { font-size: 9.5pt; color: #18181b !important; }
-  .section-num { color: #8a8a93 !important; }
-  .section-line { background: #e5e5e5 !important; }
+  /* ----- Sections ----- */
+  .section { margin-bottom: 14px; }
+  .section-head { margin-bottom: 9px; gap: 10px; }
+  .section-head h2 { font-size: 10.5px; letter-spacing: 1.4px; }
+  .section-num { font-size: 10px; }
 
-  .profile-text { color: #3f3f46 !important; font-size: 9.5pt; }
-  .profile-text strong { color: #18181b !important; }
-  .profile-text em { color: #18181b !important; }
+  .profile-text { font-size: 11px !important; line-height: 1.55 !important; max-width: 100%; }
 
-  .skills-grid { gap: 8px; grid-template-columns: repeat(2, 1fr); }
-  .skill-card {
-    background: white !important;
-    border: 1px solid #e5e5e5 !important;
-    padding: 12px 14px;
-    page-break-inside: avoid;
-  }
-  .skill-icon { width: 24px; height: 24px; margin-bottom: 6px; color: #18181b !important; }
-  .skill-card h3 { font-size: 10pt; color: #18181b !important; margin-bottom: 8px; }
-  .tags span {
-    background: #f4f4f5 !important;
-    color: #52525b !important;
-    font-size: 8pt;
-  }
+  /* ----- Skills (single row of 4) ----- */
+  .skills-grid { gap: 7px; grid-template-columns: repeat(4, 1fr) !important; }
+  .skill-card { padding: 10px 11px; border-radius: 9px; }
+  .skill-icon { width: 22px; height: 22px; margin-bottom: 6px; }
+  .skill-icon svg { width: 16px; height: 16px; }
+  .skill-card h3 { font-size: 11px; margin-bottom: 6px; }
+  .tags { gap: 4px; }
+  .tags span { font-size: 9.5px; padding: 2px 6px; }
 
-  .timeline::before { background: #e5e5e5 !important; }
-  .exp { margin-bottom: 14px; page-break-inside: avoid; }
-  .exp-marker {
-    background: white !important;
-    border-color: #18181b !important;
-  }
-  .exp-head h3 { font-size: 10.5pt; color: #18181b !important; }
-  .exp-company { color: #52525b !important; font-size: 9pt; margin-bottom: 8px; }
-  .exp-date { color: #8a8a93 !important; font-size: 8.5pt; }
-  .exp-tag { background: #f4f4f5 !important; color: #52525b !important; }
-  .exp li { color: #3f3f46 !important; font-size: 9pt; margin-bottom: 4px; }
-  .exp li strong { color: #18181b !important; }
-  .exp li::before { background: #8a8a93 !important; }
+  /* ----- Timeline ----- */
+  .timeline { padding-left: 20px; }
+  .timeline::before { left: 4px; }
+  .exp { margin-bottom: 11px; }
+  .exp-marker { left: -20px; top: 4px; width: 9px; height: 9px; border-width: 1.5px; }
+  .exp-head h3 { font-size: 12px; }
+  .exp-tag { font-size: 9px; padding: 1px 6px; }
+  .exp-date { font-size: 10px; }
+  .exp-company { font-size: 10.5px; margin-bottom: 6px; }
+  .exp li { font-size: 10.5px; padding-left: 14px; margin-bottom: 3px; line-height: 1.5; }
+  .exp li::before { top: 8px; width: 6px; }
 
-  .grid-2 { gap: 24px; }
-  .edu { border-color: #e5e5e5 !important; padding: 10px 0; }
-  .edu h3 { font-size: 9.5pt; color: #18181b !important; }
-  .edu-meta { color: #8a8a93 !important; font-size: 8.5pt; }
-  .edu p { color: #3f3f46 !important; font-size: 8.5pt; }
+  /* ----- Bottom grid ----- */
+  .grid-2 { gap: 22px; }
+  .edu { padding: 7px 0; }
+  .edu h3 { font-size: 11px; margin-bottom: 2px; }
+  .edu-meta { font-size: 10px; margin-bottom: 3px; }
+  .edu p { font-size: 10px; line-height: 1.45; }
 
-  .lang-bar { background: #ececec !important; }
-  .lang-bar > div { background: #18181b !important; }
-  .lang-head > span:first-child { color: #18181b !important; font-size: 9.5pt; }
-  .lang-level { color: #8a8a93 !important; }
-  .lang-desc { color: #8a8a93 !important; font-size: 8pt; }
-  .interests { border-color: #e5e5e5 !important; }
-  .interests h4 { color: #8a8a93 !important; }
-  .interests li { color: #3f3f46 !important; font-size: 9pt; }
-  .interests li strong { color: #18181b !important; }
+  .lang { margin-bottom: 9px; }
+  .lang-head { margin-bottom: 4px; }
+  .lang-head > span:first-child { font-size: 11px; }
+  .lang-level { font-size: 10px; }
+  .lang-bar { height: 3px; }
+  .lang-desc { font-size: 9.5px; margin-top: 4px; line-height: 1.4; }
+  .interests { margin-top: 12px; padding-top: 12px; }
+  .interests h4 { font-size: 9.5px; margin-bottom: 6px; letter-spacing: 1.4px; }
+  .interests li { font-size: 10.5px; margin-bottom: 3px; line-height: 1.45; }
 
-  .cv-footer {
-    color: #8a8a93 !important;
-    border-color: #e5e5e5 !important;
-    margin-top: 24px;
-    padding-top: 14px;
-  }
+  /* ----- Footer ----- */
+  .cv-footer { display: none; }
 }
+
