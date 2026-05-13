@@ -407,8 +407,8 @@ h1 {
 
   html, body {
     background: var(--bg) !important;
-    font-size: 10.5px !important;
-    line-height: 1.45 !important;
+    font-size: 10px !important;
+    line-height: 1.42 !important;
   }
 
   .no-print { display: none !important; }
@@ -417,7 +417,7 @@ h1 {
   .cv {
     max-width: 100%;
     margin: 0;
-    padding: 7mm 10mm 5mm;
+    padding: 6mm 9mm 5mm;
   }
 
   /* Disable JS-driven reveal in case print fires before observer */
@@ -426,67 +426,67 @@ h1 {
 
   /* ----- Hero ----- */
   .hero {
-    gap: 22px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    gap: 20px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
-  .avatar { width: 84px; height: 84px; }
-  h1 { font-size: 26px !important; margin-bottom: 4px; letter-spacing: -0.8px; }
-  .role { font-size: 12.5px !important; margin-bottom: 10px; }
-  .status { padding: 3px 9px; font-size: 10px; margin-bottom: 8px; }
+  .avatar { width: 78px; height: 78px; }
+  h1 { font-size: 24px !important; margin-bottom: 3px; letter-spacing: -0.8px; }
+  .role { font-size: 12px !important; margin-bottom: 8px; }
+  .status { padding: 2px 8px; font-size: 9.5px; margin-bottom: 7px; }
   .status-dot { width: 5px; height: 5px; }
-  .contacts { gap: 4px 14px; margin-bottom: 8px; }
-  .contacts li { font-size: 10.5px; }
-  .contacts li svg { width: 11px; height: 11px; }
-  .links { gap: 5px; }
-  .chip { padding: 3px 9px; font-size: 10px; }
-  .chip svg { width: 11px; height: 11px; }
+  .contacts { gap: 3px 13px; margin-bottom: 7px; }
+  .contacts li { font-size: 10px; }
+  .contacts li svg { width: 10px; height: 10px; }
+  .links { gap: 4px; }
+  .chip { padding: 2px 8px; font-size: 9.5px; }
+  .chip svg { width: 10px; height: 10px; }
 
   /* ----- Sections ----- */
-  .section { margin-bottom: 14px; }
-  .section-head { margin-bottom: 9px; gap: 10px; }
-  .section-head h2 { font-size: 10.5px; letter-spacing: 1.4px; }
-  .section-num { font-size: 10px; }
+  .section { margin-bottom: 11px; }
+  .section-head { margin-bottom: 7px; gap: 9px; }
+  .section-head h2 { font-size: 10px; letter-spacing: 1.3px; }
+  .section-num { font-size: 9.5px; }
 
-  .profile-text { font-size: 11px !important; line-height: 1.55 !important; max-width: 100%; }
+  .profile-text { font-size: 10.5px !important; line-height: 1.5 !important; max-width: 100%; }
 
   /* ----- Skills (single row of 4) ----- */
-  .skills-grid { gap: 7px; grid-template-columns: repeat(4, 1fr) !important; }
-  .skill-card { padding: 10px 11px; border-radius: 9px; }
-  .skill-icon { width: 22px; height: 22px; margin-bottom: 6px; }
-  .skill-icon svg { width: 16px; height: 16px; }
-  .skill-card h3 { font-size: 11px; margin-bottom: 6px; }
-  .tags { gap: 4px; }
-  .tags span { font-size: 9.5px; padding: 2px 6px; }
+  .skills-grid { gap: 6px; grid-template-columns: repeat(4, 1fr) !important; }
+  .skill-card { padding: 8px 10px; border-radius: 8px; }
+  .skill-icon { width: 20px; height: 20px; margin-bottom: 5px; }
+  .skill-icon svg { width: 14px; height: 14px; }
+  .skill-card h3 { font-size: 10.5px; margin-bottom: 5px; }
+  .tags { gap: 3px; }
+  .tags span { font-size: 9px; padding: 1px 6px; }
 
   /* ----- Timeline ----- */
-  .timeline { padding-left: 20px; }
+  .timeline { padding-left: 18px; }
   .timeline::before { left: 4px; }
-  .exp { margin-bottom: 11px; }
-  .exp-marker { left: -20px; top: 4px; width: 9px; height: 9px; border-width: 1.5px; }
-  .exp-head h3 { font-size: 12px; }
-  .exp-tag { font-size: 9px; padding: 1px 6px; }
-  .exp-date { font-size: 10px; }
-  .exp-company { font-size: 10.5px; margin-bottom: 6px; }
-  .exp li { font-size: 10.5px; padding-left: 14px; margin-bottom: 3px; line-height: 1.5; }
-  .exp li::before { top: 8px; width: 6px; }
+  .exp { margin-bottom: 9px; }
+  .exp-marker { left: -18px; top: 4px; width: 8px; height: 8px; border-width: 1.5px; }
+  .exp-head h3 { font-size: 11.5px; }
+  .exp-tag { font-size: 8.5px; padding: 0 5px; }
+  .exp-date { font-size: 9.5px; }
+  .exp-company { font-size: 10px; margin-bottom: 5px; }
+  .exp li { font-size: 10px; padding-left: 13px; margin-bottom: 2px; line-height: 1.45; }
+  .exp li::before { top: 7px; width: 6px; }
 
   /* ----- Bottom grid ----- */
-  .grid-2 { gap: 22px; }
-  .edu { padding: 7px 0; }
-  .edu h3 { font-size: 11px; margin-bottom: 2px; }
-  .edu-meta { font-size: 10px; margin-bottom: 3px; }
-  .edu p { font-size: 10px; line-height: 1.45; }
+  .grid-2 { gap: 20px; }
+  .edu { padding: 6px 0; }
+  .edu h3 { font-size: 10.5px; margin-bottom: 1px; }
+  .edu-meta { font-size: 9.5px; margin-bottom: 2px; }
+  .edu p { font-size: 9.5px; line-height: 1.42; }
 
-  .lang { margin-bottom: 9px; }
-  .lang-head { margin-bottom: 4px; }
-  .lang-head > span:first-child { font-size: 11px; }
-  .lang-level { font-size: 10px; }
+  .lang { margin-bottom: 7px; }
+  .lang-head { margin-bottom: 3px; }
+  .lang-head > span:first-child { font-size: 10.5px; }
+  .lang-level { font-size: 9.5px; }
   .lang-bar { height: 3px; }
-  .lang-desc { font-size: 9.5px; margin-top: 4px; line-height: 1.4; }
-  .interests { margin-top: 12px; padding-top: 12px; }
-  .interests h4 { font-size: 9.5px; margin-bottom: 6px; letter-spacing: 1.4px; }
-  .interests li { font-size: 10.5px; margin-bottom: 3px; line-height: 1.45; }
+  .lang-desc { font-size: 9px; margin-top: 3px; line-height: 1.38; }
+  .interests { margin-top: 10px; padding-top: 10px; }
+  .interests h4 { font-size: 9px; margin-bottom: 5px; letter-spacing: 1.3px; }
+  .interests li { font-size: 10px; margin-bottom: 2px; line-height: 1.42; }
 
   /* ----- Footer ----- */
   .cv-footer { display: none; }
